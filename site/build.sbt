@@ -13,4 +13,4 @@ libraryDependencies += "org.scalatra.scalate" % "scalate-wikitext_2.11" % "1.7.1
 libraryDependencies += "org.scalatra.scalate" % "scalate-page_2.11" % "1.7.1"
 libraryDependencies += "org.scalatra.scalate" % "scalate-test_2.11" % "1.7.1"
 
-mainClass in (Compile,run) := Some("com.rdelfin.site.Server")
+mainClass := Some("com.rdelfin.site.Server")
