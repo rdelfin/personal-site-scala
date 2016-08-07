@@ -16,7 +16,8 @@ object Server extends TwitterServer {
 
     override def apply(request: Request): Future[Response] = {
       val response = Response(request.version, Status.Ok)
-      response.contentString = engine.layout("templates/main.ssp")
+      response.contentString = engine.layout("templates/main.ssp", Map("name" -> "Home"))
+      log.debug("Sending content %s", response.contentString)
       Future.value(response)
     }
   }
