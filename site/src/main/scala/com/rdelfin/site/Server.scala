@@ -20,7 +20,7 @@ object Server extends TwitterServer {
 
       if(request.path == "/") {
         val response = Response(request.version, Status.Ok)
-        response.contentString = engine.layout("templates/main.ssp", Map("name" -> "Home", "title" -> "hello"))
+        response.contentString = engine.layout("templates/main.jade", Map("name" -> "Home", "title" -> "hello"))
         log.debug("Sending content %s", response.contentString)
         Future.value(response)
 
