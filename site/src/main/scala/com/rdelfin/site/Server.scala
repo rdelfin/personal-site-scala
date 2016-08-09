@@ -19,7 +19,7 @@ object Server extends TwitterServer {
       log.info("%s => %s", request.path, request.method.toString())
       val responseString = request.path match {
         case "/"       => engine.layout("templates/main.ssp", Map("name" -> "Home", "title" -> "hello"))
-        case s: String => Source.fromFile(s.substring(1)).mkString
+        case s: String => engine.load(request.path)
       }
 
 
