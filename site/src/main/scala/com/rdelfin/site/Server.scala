@@ -6,7 +6,7 @@ import com.twitter.server.TwitterServer
 import com.twitter.util.{Await, Future}
 import org.fusesource.scalate._
 
-import scala.io.Source
+import scala.runtime.AbstractFunction1
 
 /**
   * Created by ricar on 25/07/2016.
@@ -17,16 +17,26 @@ object Server extends TwitterServer {
 
     override def apply(request: Request): Future[Response] = {
       log.info("%s => %s", request.path, request.method.toString())
-      val responseString = request.path match {
-        case "/"       => engine.layout("templates/main.ssp", Map("name" -> "Home", "title" -> "hello"))
-        case s: String => engine.load(request.path)
+
+      if(request.path == "/") {
+        val response = Response(request.version, Status.Ok)
+        response.contentString = engine.layout("templates/main.ssp", Map("name" -> "Home", "title" -> "hello"))
+        log.debug("Sending content %s", response.contentString)
+        Future.value(response)
+
+      }else {
+        ResourceReader.get(request.path)
+          .map((text) => {
+            val response = Response(request.version, Status.Ok)
+            response.contentString = text
+            log.debug("Sending content %s", response.contentString)
+            response
+          }).rescue({
+          case t: Throwable =>
+            val response = Response(request.version, Status.NotFound)
+            Future.value(response)
+        })
       }
-
-
-      val response = Response(request.version, Status.Ok)
-      response.contentString = responseString
-      log.debug("Sending content %s", response.contentString)
-      Future.value(response)
     }
   }
 
