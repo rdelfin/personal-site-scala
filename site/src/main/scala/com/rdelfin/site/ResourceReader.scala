@@ -33,7 +33,7 @@ object ResourceReader {
   private def standardizePath(path: String) : String = {
     if(path.charAt(0) != '/')
       "/" + path
-
-    path
+    else
+      path
   }
 }
