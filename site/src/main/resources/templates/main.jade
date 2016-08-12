@@ -1,19 +1,19 @@
 !!! 5
 html(lang="en")
   head
-      meta(http-equiv='X-UA-Compatible' content='IE=edge')/
-      meta(name='viewport' content='width=device-width, initial-scale=1')/
-      meta(charset='utf-8')/
-      title=name + ' - Ricardo Delfín'
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')/
+    meta(name='viewport' content='width=device-width, initial-scale=1')/
+    meta(charset='utf-8')/
+    title=" - Ricardo Delfín"
 
-      / Bootstrap core CSS
-      link(href='/css/bootstrap.min.css' rel='stylesheet')
+    / Bootstrap core CSS
+    link(href='/css/bootstrap.min.css' rel='stylesheet')
 
-      / IE10 viewport hack for Surface/desktop Windows 8 bug
-      link(href='/css/ie10-viewport-bug-workaround.css' rel='stylesheet')
+    / IE10 viewport hack for Surface/desktop Windows 8 bug
+    link(href='/css/ie10-viewport-bug-workaround.css' rel='stylesheet')
 
-      / Custom styles for this template
-      link(href='/css/navbar.css' rel='stylesheet')
+    / Custom styles for this template
+    link(href='/css/navbar.css' rel='stylesheet')
   body
     div.container
       nav.navbar.navbar-default.navbar-fixed-top
@@ -24,30 +24,29 @@ html(lang="en")
               span.icon-bar
               span.icon-bar
               span.icon-bar
-            a.navbar-brand(href="#")=name
+            a.navbar-brand(href="#") ${name}
           div#navbar.navbar-collapse.collapse
             ul.nav.navbar-nav
               li.active
-                a(href="#")Home
+                a(href="#") Home
               li.dropdown
-                a.dropdown-toggle(href="/projects" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")
-                    Projects<span class="caret"></span>
-                  ul.dropdown-menu
-                    li
-                      a(href="#") Robot Car
-                    li
-                      a(href="#")Twitter Bots
-                    li
-                      a(href="#")Newton Fractals
+                a.dropdown-toggle(href="/projects" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Projects<span class="caret"></span>
+                ul.dropdown-menu
+                  li
+                    a(href="#") Robot Car
+                  li
+                    a(href="#") Twitter Bots
+                  li
+                    a(href="#") Newton Fractals
               li
-                a(href="/contact")Contact
+                a(href="/contact") Contact
             ul.nav.navbar-nav.navbar-right
               li
-                a(href="#")Login
+                a(href="#") Login
 
         / Main component for a primary marketing message or call to action 
         div.jumbotron
-          h1=title
+          h1 ${title}
           p
             | Welcome to personal site! Browse the menu at the top to find different projects, information, and more!
 
@@ -55,8 +54,8 @@ html(lang="en")
 
     / Bootstrap core JavaScript
     / Placed at the end of the document so the pages load faster
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"
-    script
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+    :javascript
       window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
     script(src="/js/bootstrap.min.js")
     / IE10 viewport hack for Surface/desktop Windows 8 bug
