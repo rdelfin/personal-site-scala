@@ -6,8 +6,6 @@ import com.twitter.server.TwitterServer
 import com.twitter.util.{Await, Future}
 import org.fusesource.scalate._
 
-import scala.runtime.AbstractFunction1
-
 /**
   * Created by ricar on 25/07/2016.
   */
@@ -28,7 +26,7 @@ object Server extends TwitterServer {
         ResourceReader.get(request.path)
           .map((text) => {
             val response = Response(request.version, Status.Ok)
-            response.contentString = text
+            response.content = text
             log.debug("Sending content %s", response.contentString)
             response
           }).rescue({

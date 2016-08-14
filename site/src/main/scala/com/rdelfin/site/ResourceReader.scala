@@ -3,6 +3,7 @@ package com.rdelfin.site
 import java.io.FileNotFoundException
 import java.util.concurrent.Executors
 
+import com.twitter.io.Buf
 import com.twitter.util.{Future, FuturePool}
 
 
@@ -12,7 +13,7 @@ import com.twitter.util.{Future, FuturePool}
 object ResourceReader {
   val executor = Executors.newFixedThreadPool(10)
   val futurePool = FuturePool(executor)
-  def get(path: String) : Future[String] = {
+  def get(path: String) : Future[Buf] = {
 
 
     val future = futurePool {
@@ -20,9 +21,10 @@ object ResourceReader {
       val stream = getClass.getResourceAsStream(path)
       if(stream == null || stream.available() == 0)
         throw new FileNotFoundException
-      val lines = scala.io.Source.fromInputStream(stream).getLines
+      val data = Stream.continually(stream.read).takeWhile(_ != -1).map(_.toByte).toArray
 
-      lines.reduceRight((s1, s2) => s1 + "\n" + s2)
+
+      Buf.ByteArray.Shared(data)
     }
 
     future
