@@ -22,7 +22,7 @@ object Server extends TwitterServer {
   }
 
   def main() = {
-    val server = Http.serve(":8080", service)
+    val server = Http.serve(":80", service)
     onExit {
       server.close()
     }
