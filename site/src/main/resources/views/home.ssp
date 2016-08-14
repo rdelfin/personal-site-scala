@@ -1,8 +1,8 @@
 <div class="jumbotron">
   <h1>Welcome!</h1>
-  <p>Welcome to my page! My name is Ricardo Delfin. I am a Computer Science student, at the
-     University of Texas at Austin. I am also a Raspberry Pi, robotics, and astronomy
-     enthusiast. Explore my page!</p>
+  <p>Welcome to my page! My name is Ricardo Delfin. I am a Computer Science and Astronomy
+     student, at the University of Texas at Austin. I am also a Raspberry Pi, robotics,
+     and astronomy enthusiast. Explore my page!</p>
 </div>
 
 <div class="row">

@@ -22,7 +22,13 @@ object Server extends TwitterServer {
         log.debug("Sending content %s", response.contentString)
         Future.value(response)
 
-      }else {
+      } else if(request.path == "/contact") {
+        val response = Response(request.version, Status.Ok)
+        response.contentString = engine.layout("templates/main.ssp", Map("name" -> "Contact Me", "bodyFile" -> "/views/contact.ssp"))
+        log.debug("Sending content %s", response.contentString)
+        Future.value(response)
+
+      } else {
         ResourceReader.get(request.path)
           .map((text) => {
             val response = Response(request.version, Status.Ok)
