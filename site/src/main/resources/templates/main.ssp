@@ -63,6 +63,11 @@
 
             ${include(bodyFile)}
 
+            <hr />
+            <footer>
+                <p>&copy; 2016 - Ricardo Delfin Garcia</p>
+            </footer>
+
         </div> <!-- /container -->
 
 
