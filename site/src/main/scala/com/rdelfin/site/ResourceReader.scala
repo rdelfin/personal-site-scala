@@ -16,9 +16,8 @@ object ResourceReader {
 
 
     val future = futurePool {
-      val stdPath = standardizePath(path)
 
-      val stream = getClass.getResourceAsStream(stdPath)
+      val stream = getClass.getResourceAsStream(path)
       if(stream == null || stream.available() == 0)
         throw new FileNotFoundException
       val lines = scala.io.Source.fromInputStream(stream).getLines
@@ -27,13 +26,5 @@ object ResourceReader {
     }
 
     future
-  }
-
-
-  private def standardizePath(path: String) : String = {
-    if(path.charAt(0) != '/')
-      "/" + path
-    else
-      path
   }
 }

@@ -1,5 +1,6 @@
 <%@ val name: String = "" %>
 <%@ val title: String = "" %>
+<%@ val bodyFile: String = "" %>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -27,43 +28,39 @@
 
         <div class="container">
 
-        <!-- Static navbar -->
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">${name}</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li class="dropdown">
-                            <a href="/projects" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Robot Car</a></li>
-                                <li><a href="#">Twitter Bots</a></li>
-                                <li><a href="#">Newton Fractals</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="/contact">Contact</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Login</a></li>
-                    </ul>
-                </div><!--/.nav-collapse -->
-            </div><!--/.container-fluid -->
-        </nav>
+            <!-- Static navbar -->
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">${name}</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li class="dropdown">
+                                <a href="/projects" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Robot Car</a></li>
+                                    <li><a href="#">Twitter Bots</a></li>
+                                    <li><a href="#">Newton Fractals</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/contact">Contact</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Login</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div><!--/.container-fluid -->
+            </nav>
 
-        <!-- Main component for a primary marketing message or call to action -->
-        <div class="jumbotron">
-            <h1>${title}</h1>
-            <p>Welcome to personal site! Browse the menu at the top to find different projects, information, and more!</p>
-        </div>
+            ${include(bodyFile)}
 
         </div> <!-- /container -->
 
