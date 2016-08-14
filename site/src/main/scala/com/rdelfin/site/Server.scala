@@ -38,6 +38,7 @@ object Server extends TwitterServer {
           }).rescue({
           case t: Throwable =>
             val response = Response(request.version, Status.NotFound)
+            response.contentString = engine.layout("templates/main.ssp", Map("name" -> "404 Not Found", "bodyFile" -> "/error/404.ssp", "path" -> request.path))
             Future.value(response)
         })
       }

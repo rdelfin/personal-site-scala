@@ -1,0 +1,6 @@
+<%@ val path: String = "" %>
+<div class="jumbotron">
+  <h1>404 - Page not Found!</h1>
+  <p>The page you requested: &quot;${path}&quot;, could not be fetched. Use the menu above to navigate to
+     a different page.</p>
+</div>
