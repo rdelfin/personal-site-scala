@@ -12,36 +12,12 @@ import org.fusesource.scalate._
 object Server extends TwitterServer {
   val service = new Service[Request, Response] {
     val engine = new TemplateEngine
+    val routes = new Routes(engine)
 
     override def apply(request: Request): Future[Response] = {
       log.info("%s => %s", request.path, request.method.toString())
 
-      if(request.path == "/") {
-        val response = Response(request.version, Status.Ok)
-        response.contentString = engine.layout("templates/main.ssp", Map("name" -> "Home", "bodyFile" -> "/views/home.ssp"))
-        log.debug("Sending content %s", response.contentString)
-        Future.value(response)
-
-      } else if(request.path == "/contact") {
-        val response = Response(request.version, Status.Ok)
-        response.contentString = engine.layout("templates/main.ssp", Map("name" -> "Contact Me", "bodyFile" -> "/views/contact.ssp"))
-        log.debug("Sending content %s", response.contentString)
-        Future.value(response)
-
-      } else {
-        ResourceReader.get(request.path)
-          .map((text) => {
-            val response = Response(request.version, Status.Ok)
-            response.content = text
-            log.debug("Sending content %s", response.contentString)
-            response
-          }).rescue({
-          case t: Throwable =>
-            val response = Response(request.version, Status.NotFound)
-            response.contentString = engine.layout("templates/main.ssp", Map("name" -> "404 Not Found", "bodyFile" -> "/error/404.ssp", "path" -> request.path))
-            Future.value(response)
-        })
-      }
+      routes.get(request.path)
     }
   }
 
