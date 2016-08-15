@@ -1,0 +1,17 @@
+<div class="jumbotron">
+  <h1>Twitcher: The Robot Tweeter</h1>
+  <p>This project has the purpose of providing a Twitter user interface for the robots in the Building
+     Wide Intelligence project at the University of Texas at Austin, Computer Science Department.</p>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    
+  </div>
+  <div class="col-md-4">
+
+  </div>
+  <div class="col-md-4">
+
+  </div>
+</div>
