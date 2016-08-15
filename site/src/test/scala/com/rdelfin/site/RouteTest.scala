@@ -20,7 +20,7 @@ class RouteTest {
   val mapAttributes = noMapAttributes + ("sample" -> "attribute")
 
   @Test def routeWithoutMapTest(): Unit = assertTrue(routeWithoutMap.attrMap() == noMapAttributes)
-  @Test def routeWithMapTest(): Unit = assertTrue(routeWithMap.attrMap() == noMapAttributes)
+  @Test def routeWithMapTest(): Unit = assertTrue(routeWithMap.attrMap() == mapAttributes)
 
   @Test def routeSelfEqual(): Unit = assertTrue(baseRoute == baseRoute)
   @Test def routeIdenticalEqual(): Unit = assertTrue(baseRoute == identicalRoute)
