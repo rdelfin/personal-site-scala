@@ -15,7 +15,8 @@ class Routes(val engine: TemplateEngine) {
 
   private val views = List(Route("/", "/views/home.ssp", "Home"),
                            Route("/contact", "/views/contact.ssp", "Contact Me"),
-                           Route("/projects/car", "/views/projects/car.ssp", "Project: Robot Car"))
+                           Route("/projects/car", "/views/projects/car.ssp", "Project: Robot Car"),
+                           Route("/projects/twitcher", "/views/projects/twitcher.ssp", "Project: Twitter Robots"))
   private val templatePath: String = "/templates/main.ssp"
 
   def get(path: String) : Future[Response] = {
