@@ -14,7 +14,8 @@ class Routes(val engine: TemplateEngine) {
   private val log = Logger(getClass.getName.stripSuffix("$"))
 
   private val views = List(Route("/", "/views/home.ssp", "Home"),
-                           Route("/contact", "/views/contact.ssp", "Contact Me"))
+                           Route("/contact", "/views/contact.ssp", "Contact Me"),
+                           Route("/projects/car", "/views/projects/car.ssp", "Project: Robot Car"))
   private val templatePath: String = "/templates/main.ssp"
 
   def get(path: String) : Future[Response] = {
