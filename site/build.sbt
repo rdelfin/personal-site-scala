@@ -13,4 +13,7 @@ libraryDependencies += "org.scalatra.scalate" % "scalate-wikitext_2.11" % "1.7.1
 libraryDependencies += "org.scalatra.scalate" % "scalate-page_2.11" % "1.7.1"
 libraryDependencies += "org.scalatra.scalate" % "scalate-test_2.11" % "1.7.1"
 
+libraryDependencies += "org.scala-tools.testing" %% "scalacheck" % "1.9" % "test"
+libraryDependencies += "com.novocode" % "junit-interface" % "0.8" % "test->default"
+
 mainClass := Some("com.rdelfin.site.Server")
