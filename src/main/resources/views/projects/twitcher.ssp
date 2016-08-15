@@ -1,0 +1,31 @@
+<div class="jumbotron">
+  <h1>Twitcher: The Robot Tweeter</h1>
+  <p>This project has the purpose of providing a Twitter user interface for the robots in the Building
+     Wide Intelligence project at the University of Texas at Austin, Computer Science Department.</p>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <h2>Want to look at the code?</h2>
+    <p>You can find all the code here!</p>
+    <p><a href="https://github.com/rdelfin/utexas-bwi-twitter-coms" class="btn btn-default">ROS Nodes! &raquo;</a></p>
+    <p><a href="https://github.com/rdelfin/bwi_experimental/tree/master/bwi_twitter" class="btn btn-default">Also here &raquo;</a></p>
+  </div>
+  <div class="col-md-8">
+    <h2>How does it work?</h2>
+    <p>This project makes use of the <a href="https://github.com/utexas-bwi/bwi_common">BWI
+       Project</a> codebase. Specifically, the bwi_kr_execution, or knowledge reasoner, package.
+       This provides a set of services to send goals to the robots.</p>
+    <p>The twitter handler is divided into 4 distinct components: The twitter connection, the
+       manager, the interpreter and the action executor. The twitter connection essentially is
+       in charge of connecting to twitter, both directly fetching new tweets and sending responses.</p>
+    <p>The second, the manager, coordinates all actions. It receives new tweets from the connection,
+       decides when to send responses, and sends requests to both the interpreter and action executors.</p>
+    <p>Next up, we have the interpreter. This one is in charge of converting tweets into an action.
+       This self-contained box is where all the research will happen going forward. Currently is uses
+       a simple regex pattern, but the long term goal is to use NLP to identify messages accordingly.</p>
+    <p>Finally, we have the action executor. This one simply translates action messages into goals
+       to be sent to the knowledge reasoner. From here, we can ask the robot to create a plan to go to
+       a particular room or hallway.</p>
+  </div>
+</div>
