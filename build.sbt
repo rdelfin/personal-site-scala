@@ -1,4 +1,4 @@
-name := "site"
+name := "personal-site-scala"
 
 version := "1.0"
 
