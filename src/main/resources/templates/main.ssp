@@ -47,7 +47,7 @@
                                 <a href="/projects" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="/projects/car">Robot Car</a></li>
-                                    <li><a href="#">Twitter Bots</a></li>
+                                    <li><a href="/projects/twitcher">Twitter Bots</a></li>
                                     <li><a href="#">Newton Fractals</a></li>
                                 </ul>
                             </li>

@@ -1,30 +1,50 @@
 package com.rdelfin.site
 
-import org.junit.Test
-import org.junit.Assert._
+import org.scalatest._
+
 
 /**
   * Created by rdelfin on 8/15/16.
   */
-class RouteTest {
-  val routeWithoutMap = Route("path", "viewPath", "title")
-  val routeWithMap = Route("path", "viewPath", "title", Map("sample" -> "attribute"))
+class RouteTest extends UnitSpec {
+  "A route attribute map" should "contain a name and bodyFile" in {
+    val route = Route("path", "viewPath", "title")
+    val map = Map("name" -> "title", "bodyFile" -> "viewPath")
+    assert(route.attrMap() == map)
+  }
 
-  val baseRoute = Route("path1", "viewPath1", "title1")
-  val identicalRoute = Route("path1", "viewPath1", "title1")
-  val samePathRoute = Route("path1", "viewPath2", "title2")
-  val diffPathRoute = Route("path2", "viewPath1", "title1")
-  val diffRoute = Route("path2", "viewPath2", "title2")
+  it should "contain a name, bodyFile, and any additional mappings passed in" in {
+    val route = Route("path", "viewPath", "title", Map("sample" -> "attribute"))
+    val map = Map("name" -> "title", "bodyFile" -> "viewPath", "sample" -> "attribute")
+    assert(route.attrMap() == map)
+  }
 
-  val noMapAttributes = Map("name" -> "title", "bodyFile" -> "viewPath")
-  val mapAttributes = noMapAttributes + ("sample" -> "attribute")
+  "A route" should "equal itself" in {
+    val route = Route("path1", "viewPath1", "title1")
+    assert(route == route)
+  }
 
-  @Test def routeWithoutMapTest(): Unit = assertTrue(routeWithoutMap.attrMap() == noMapAttributes)
-  @Test def routeWithMapTest(): Unit = assertTrue(routeWithMap.attrMap() == mapAttributes)
+  it should "equal an identical route" in {
+    val route1 = Route("path1", "viewPath1", "title1")
+    val route2 = Route("path1", "viewPath1", "title1")
+    assert(route1 == route2)
+  }
 
-  @Test def routeSelfEqual(): Unit = assertTrue(baseRoute == baseRoute)
-  @Test def routeIdenticalEqual(): Unit = assertTrue(baseRoute == identicalRoute)
-  @Test def routeSamePathEqual(): Unit = assertTrue(baseRoute == samePathRoute)
-  @Test def routeDifferentPathNotEqual(): Unit = assertTrue(baseRoute != diffPathRoute)
-  @Test def routeDifferentRouteNotEqual(): Unit = assertTrue(baseRoute != diffRoute)
+  it should "equal a route with only the same path" in {
+    val route1 = Route("path1", "viewPath1", "title1")
+    val route2 = Route("path1", "viewPath2", "title2")
+    assert(route1 == route2)
+  }
+
+  it should "not equal a route with only a different path" in {
+    val route1 = Route("path1", "viewPath1", "title1")
+    val route2 = Route("path2", "viewPath1", "title1")
+    assert(route1 != route2)
+  }
+
+  it should "not equal an entirely different path" in {
+    val route1 = Route("path1", "viewPath1", "title1")
+    val route2 = Route("path2", "viewPath2", "title2")
+    assert(route1 != route2)
+  }
 }
