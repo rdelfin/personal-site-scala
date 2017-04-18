@@ -1,3 +1,12 @@
+#set (name)
+Contact Me
+#end
+
+#set (title)
+Contact Me
+#end
+
+#set (bodyElem)
 <h2>Contact Me</h2>
 <address>
   <abbr title="Email">E:</abbr><a href="mailto:ricardo.delfin.garcia@gmail.com">&nbsp;ricardo.delfin.garcia@gmail.com</a><br />
@@ -8,3 +17,4 @@
   <a href="https://www.twitter.com/ridelfin">Twitter</a>
 </address>
 </div>
+#end

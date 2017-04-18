@@ -1,3 +1,12 @@
+#set (name)
+    Home
+#end
+
+#set (title)
+    Home
+#end
+
+#set (bodyElem)
 <div class="jumbotron">
   <h1>Welcome!</h1>
   <p>Welcome to my page! My name is Ricardo Delfin. I am a Computer Science and Astronomy
@@ -8,3 +17,4 @@
 <div class="row">
   <div class="col-md-4"></div>
 </div>
+#end

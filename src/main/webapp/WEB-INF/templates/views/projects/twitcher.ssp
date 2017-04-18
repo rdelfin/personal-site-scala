@@ -1,3 +1,12 @@
+#set (name)
+    Twitcher - Project
+#end
+
+#set (title)
+    Twitcher - Project
+#end
+
+#set (bodyElem)
 <div class="jumbotron">
   <h1>Twitcher: The Robot Tweeter</h1>
   <p>This project has the purpose of providing a Twitter user interface for the robots in the Building
@@ -29,3 +38,4 @@
        a particular room or hallway.</p>
   </div>
 </div>
+#end
