@@ -7,14 +7,16 @@
 #end
 
 #set (bodyElem)
-<div class="jumbotron">
-  <h1>Welcome!</h1>
-  <p>Welcome to my page! My name is Ricardo Delfin. I am a Computer Science and Astronomy
-     student, at the University of Texas at Austin. I am also a Raspberry Pi, robotics,
-     and astronomy enthusiast. Explore my page!</p>
-</div>
-
-<div class="row">
-  <div class="col-md-4"></div>
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--12-col">
+    <p>Welcome!</p>
+  </div>
+  <div class="mdl-cell mdl-cell--12-col-tablet">
+    Welcome to my page! My name is Ricardo Delfin. I am a Computer Science
+    student, at the University of Texas at Austin. I am also a Raspberry Pi,
+    robotics, and astronomy enthusiast. Explore my page!
+  </div>
+  <div class="mdl-cell mdl-cell--4-col-tablet">Cell 2</div>
+  <div class="mdl-cell mdl-cell--4-col-tablet">Cell 3</div>
 </div>
 #end
