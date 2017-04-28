@@ -62,14 +62,7 @@ Twitcher - Project
         <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"  onclick="window.location.href='https://github.com/rdelfin/robot_car_controllers'">
           <i class="material-icons">&#xE2C4;</i>
         </button>
-
       </div>
-
-
-    <!-- <h2>Want to look at the code?</h2>
-      -    <p>You can find it here!</p>
-      -    <p><a href="https://github.com/rdelfin/robot_car_controllers" class="btn btn-default">Controllers! &raquo;</a></p>
-      -->
 
     </div>
     </div>
