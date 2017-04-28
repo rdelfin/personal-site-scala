@@ -21,7 +21,7 @@
         <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
             <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
                 <div class="mdl-layout__header-row">
-                    <span class="mdl-layout__title">Ricardo Delfin</span>
+                    <span class="mdl-layout__title">Ricardo Delfín</span>
                 </div>
                 <div class="mdl-layout__header-row portfolio-navigation-row">
                     <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
@@ -33,7 +33,7 @@
                 </div>
             </header>
             <div class="mdl-layout__drawer mdl-layout--small-screen-only">
-                <span class="mdl-layout__title">Ricardo Delfin</span>
+                <span class="mdl-layout__title">Ricardo Delfín</span>
                 <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
                     <a class="mdl-navigation__link" href="/">Home</a>
                     <a class="mdl-navigation__link" href="/projects">Projects</a>
