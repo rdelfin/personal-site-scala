@@ -14,12 +14,12 @@
         <h2 class="mdl-card__title-text">Twitcher: The Robot Tweeter</h2>
       </div>
       <div class="mdl-card__media">
-        <img class="article-image" src="/images/car03-narrow.jpg" border="0" alt="">
+        <img class="article-image" src="/images/twitcher01.png" border="0" alt="">
       </div>
 
       <div class="mdl-card__supporting-text">
-        <strong>Blah blah</strong>
-        <span>blah blah blah, blah. Blah blah blah blah.</span>
+        <strong>CS378 Class Photo</strong>
+        <span>for spring 2017, the class I was a Peer Mentor/Undergraduate TA for.</span>
       </div>
 
 
@@ -43,7 +43,7 @@
             a particular room or hallway.</p>
         </div>
         <div class="mdl-cell mdl-cell--6-col">
-          <img class="article-image" src=" /images/car02.jpg" border="0" alt="">
+          <img class="article-image" src=" /images/twitcher02.jpg" border="0" alt="">
         </div>
 
         <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Want to look at the code?</h3>
