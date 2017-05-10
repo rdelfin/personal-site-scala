@@ -11,7 +11,7 @@ import com.typesafe.sbt.packager.archetypes.JavaAppPackaging
 object PersonalSiteBuild extends Build {
   val Organization = "com.rdelfin"
   val Name = "personalsite"
-  val Version = "0.1.0-SNAPSHOT"
+  val Version = "1.0"
   val ScalaVersion = "2.11.8"
   val ScalatraVersion = "2.5.0"
 
