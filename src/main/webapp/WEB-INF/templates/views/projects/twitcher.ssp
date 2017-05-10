@@ -18,7 +18,7 @@
         <h2 class="mdl-card__title-text">Twitcher: The Robot Tweeter</h2>
       </div>
       <div class="mdl-card__media">
-        <img class="article-image" src="/images/twitcher01.png" border="0" alt="">
+        <img class="article-image" src="/images/twitcher02.jpg" border="0" alt="">
       </div>
 
       <div class="mdl-card__supporting-text">
@@ -47,7 +47,7 @@
             a particular room or hallway.</p>
         </div>
         <div class="mdl-cell mdl-cell--6-col">
-          <img class="article-image" src=" /images/twitcher02.jpg" border="0" alt="">
+          <img class="article-image" src=" /images/twitcher03.jpg" border="0" alt="">
         </div>
 
         <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Want to look at the code?</h3>
