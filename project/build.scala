@@ -6,6 +6,8 @@ import com.earldouglas.xwp.JettyPlugin
 import com.mojolly.scalate.ScalatePlugin._
 import ScalateKeys._
 
+import com.typesafe.sbt.packager.archetypes.JavaAppPackaging
+
 object PersonalSiteBuild extends Build {
   val Organization = "com.rdelfin"
   val Name = "personalsite"
@@ -28,7 +30,7 @@ object PersonalSiteBuild extends Build {
         "org.scalatra" %% "scalatra-scalate" % ScalatraVersion,
         "org.scalatra" %% "scalatra-specs2" % ScalatraVersion % "test",
         "ch.qos.logback" % "logback-classic" % "1.1.5" % "runtime",
-        "org.eclipse.jetty" % "jetty-webapp" % "9.2.15.v20160210" % "container",
+        "org.eclipse.jetty" % "jetty-webapp" % "9.2.15.v20160210" % "compile;container",
         "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided"
       ),
       scalateTemplateConfig in Compile <<= (sourceDirectory in Compile){ base =>
@@ -44,5 +46,5 @@ object PersonalSiteBuild extends Build {
         )
       }
     )
-  ).enablePlugins(JettyPlugin)
+  ).enablePlugins(JavaAppPackaging).enablePlugins(JettyPlugin)
 }
