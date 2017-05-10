@@ -1,6 +1,7 @@
 <%@ val name: String = "" %>
 <%@ val title: String = "" %>
 <%@ val bodyElem: String = "" %>
+<%@ val headElem: String = "" %>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -15,6 +16,9 @@
         <link rel="stylesheet" href="/css/material.min.css" />
         <link rel="stylesheet" href="/css/portfolio.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+        <link rel="stylesheet" href="/css/ionicons.css" />
+
+        ${unescape(headElem)}
     </head>
 
     <body>

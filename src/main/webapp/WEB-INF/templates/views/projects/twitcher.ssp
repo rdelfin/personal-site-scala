@@ -6,6 +6,10 @@
     Twitcher - Project
 #end
 
+#set (headElem)
+
+#end
+
 #set (bodyElem)
   <div class="mdl-grid portfolio-max-width">
 
