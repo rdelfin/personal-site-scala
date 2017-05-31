@@ -3,7 +3,7 @@
 ## Build & Run ##
 
 ```sh
-$ cd miselecciones
+$ cd personal-site-scala
 $ ./sbt
 > jetty:start
 > browse
