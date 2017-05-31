@@ -6,6 +6,8 @@ Contact Me
 Contact Me
 #end
 
+#set (navbarId)nav-contact#end
+
 #set (headElem)
   <style>
     .contact-info {

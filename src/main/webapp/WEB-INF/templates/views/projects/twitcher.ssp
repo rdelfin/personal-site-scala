@@ -6,6 +6,8 @@
     Twitcher - Project
 #end
 
+#set (navbarId)nav-projects#end
+
 #set (headElem)
 
 #end

@@ -2,6 +2,7 @@
 <%@ val title: String = "" %>
 <%@ val bodyElem: String = "" %>
 <%@ val headElem: String = "" %>
+<%@ val navbarId: String = "" %>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -17,6 +18,16 @@
         <link rel="stylesheet" href="/css/portfolio.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
         <link rel="stylesheet" href="/css/ionicons.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                var nav_id = "${navbarId}".trim();
+                if($("#" + nav_id).length) {
+                    $("#" + nav_id).addClass("is-active");
+                }
+            });
+        </script>
 
         ${unescape(headElem)}
     </head>
@@ -29,10 +40,10 @@
                 </div>
                 <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
                     <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                        <a class="mdl-navigation__link" href="/">Home</a>
-                        <a class="mdl-navigation__link" href="/projects">Projects</a>
-                        <a class="mdl-navigation__link" href="/documents/resume.pdf">Resume</a>
-                        <a class="mdl-navigation__link" href="/contact">Contact</a>
+                        <a class="mdl-navigation__link" id="nav-home" href="/">Home</a>
+                        <a class="mdl-navigation__link" id="nav-projects" href="/projects">Projects</a>
+                        <a class="mdl-navigation__link" id="nav-resume" href="/documents/resume.pdf">Resume</a>
+                        <a class="mdl-navigation__link" id="nav-contact" href="/contact">Contact</a>
                     </nav>
                 </div>
             </header>

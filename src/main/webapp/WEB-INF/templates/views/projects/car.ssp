@@ -10,6 +10,8 @@ Twitcher - Project
 
 #end
 
+#set (navbarId)nav-projects#end
+
 #set (bodyElem)
   <div class="mdl-grid portfolio-max-width">
 

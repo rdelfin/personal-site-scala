@@ -6,6 +6,8 @@
     Home
 #end
 
+#set (navbarId)nav-home#end
+
 #set (headElem)
 
 #end
