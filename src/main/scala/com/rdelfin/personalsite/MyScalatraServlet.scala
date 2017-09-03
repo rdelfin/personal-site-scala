@@ -3,6 +3,13 @@ package com.rdelfin.personalsite
 import org.scalatra._
 
 class MyScalatraServlet extends PersonalSiteStack {
+  get("/blog") {
+    findTemplate("blog.ssp") map { path =>
+      contentType = "text/html"
+      layoutTemplate(path)
+    } get
+  }
+
   get("/projects") {
     findTemplate("projects.ssp") map { path =>
       contentType = "text/html"

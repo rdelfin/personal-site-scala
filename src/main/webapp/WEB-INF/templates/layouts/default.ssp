@@ -11,7 +11,7 @@
         <meta name="description" content="A portfolio template that uses Material Design Lite.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
-        <title>${name}  - Ricardo Delfín</title>
+        <title>${name} - Ricardo Delfín</title>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" />
         <link rel="stylesheet" href="/css/material.min.css" />
@@ -44,6 +44,7 @@
                         <a class="mdl-navigation__link" id="nav-projects" href="/projects">Projects</a>
                         <a class="mdl-navigation__link" id="nav-resume" href="/documents/resume.pdf">Resume</a>
                         <a class="mdl-navigation__link" id="nav-contact" href="/contact">Contact</a>
+                        <a class="mdl-navigation__link" id="nav-blog" href="/blog">Blog</a>
                     </nav>
                 </div>
             </header>
@@ -54,6 +55,7 @@
                     <a class="mdl-navigation__link" href="/projects">Projects</a>
                     <a class="mdl-navigation__link" href="/documents/resume.pdf">Resume</a>
                     <a class="mdl-navigation__link" href="/contact">Contact</a>
+                    <a class="mdl-navigation__link" href="/blog">Blog</a>
                 </nav>
             </div>
             <main class="mdl-layout__content">
