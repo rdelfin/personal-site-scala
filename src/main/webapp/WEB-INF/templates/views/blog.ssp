@@ -13,7 +13,7 @@ CS373 Fall 2017
     <div class="mdl-grid portfolio-max-width">
         <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
             <div class="mdl-card__media">
-                <img class="article-image" src="/images/uttower.png" border="0" alt="">
+                <img class="article-image" src="/images/uttower.png" border="0" alt="" />
             </div>
             <div class="mdl-card__title">
                 <h2 class="mdl-card__title-text">Week 1: 30/8 - 3/9 </h2>
@@ -30,7 +30,7 @@ CS373 Fall 2017
 
         <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
             <div class="mdl-card__media">
-                <img class="article-image" src="/images/downtown_austin.jpg" border="0" alt="">
+                <img class="article-image" src="/images/downtown_austin.jpg" border="0" alt="" />
             </div>
             <div class="mdl-card__title">
                 <h2 class="mdl-card__title-text">Week 3: 11/9 - 17/9</h2>
@@ -41,6 +41,23 @@ CS373 Fall 2017
             <div class="mdl-card__actions mdl-card--border">
                 <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent"
                     href="/blog/post3">Read more</a>
+            </div>
+        </div>
+
+
+        <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+            <div class="mdl-card__media">
+                <img class="article-image" src="/images/zocalo.jpg" border="0" alt="" />
+            </div>
+            <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">Week 4: 18/9 - 24/9</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                This week's blog will start with a bit of a somber note. This past Tuesday at 1:14 pm, just as Mexico City was...
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+                    href="/blog/post4">Read more</a>
             </div>
         </div>
     </div>
