@@ -116,7 +116,10 @@
                     Satisfaction Problems (CSP's, which we had just gone over in AI). The interesting thing is this
                     problem is a classic CSP, you can't get a more textbook formulation. However, if you solve it using
                     the first solution can be solved in linear time. CSP's however, will run with a worst-case
-                    exponential runtime, because they don't take advantage of the fact that ordering does not matter.</p>
+                    exponential runtime, because they don't take advantage of the fact that ordering does not matter.
+                    The point I'm trying to make is, sometimes the solution that comes to mind quickly and seems to
+                    solve the problem perfectly is not always the best solution. Try to exploit any information you have
+                    on the formulation to get a better solution until you can't find anything to take advantage of.</p>
             </div>
         </div>
     </div>
