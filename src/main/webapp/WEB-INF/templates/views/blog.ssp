@@ -60,5 +60,23 @@ CS373 Fall 2017
                     href="/blog/post4">Read more</a>
             </div>
         </div>
+
+
+        <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+            <div class="mdl-card__media">
+                <img class="article-image" src="/images/vancouver.jpg" border="0" alt="" />
+            </div>
+            <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">Week 5: 25/9 - 1/10</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                Well, the semester is picking up faster than I saw it coming... With homework, midterms, projects, and a continuous...
+
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+                    href="/blog/post5">Read more</a>
+            </div>
+        </div>
     </div>
 #end
