@@ -99,7 +99,6 @@ CS373 Fall 2017
 
 
 
-
     <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
         <div class="mdl-card__media">
             <img class="article-image" src="/images/hacktx.jpg" border="0" alt="" />
@@ -115,5 +114,22 @@ CS373 Fall 2017
                 href="/blog/post9">Read more</a>
         </div>
     </div>
+
+    <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+        <div class="mdl-card__media">
+            <img class="article-image" src="/images/royal_albert_hall.jpg" border="0" alt="" />
+        </div>
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Week 10: 30/10 - 5/11</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            So far it looks like this week and next week is panning out to be two pretty standard weeks. A lot to do, but nothing...
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+                href="/blog/post10">Read more</a>
+        </div>
+    </div>
+
 </div>
 #end
